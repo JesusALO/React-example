@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeaderBackground from '../images/font.jpg'
+import HeaderBackground from '../images/font1.jpg'
 import ProfilePic from '../images/profile.jpg'
 import "./style/Badge.css";
 
