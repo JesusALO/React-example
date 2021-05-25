@@ -1,16 +1,20 @@
 import React from 'react'
 import Layout from "./pages/Layout/Layout"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Main from "./pages/main/Main"
 import Badge from "./components/Badge"
 
 function App() {
   return (
-    <React.Frafment>
+    <BrowserRouter>
       <Layout>
-      <Badge picture={"https://neilpatel.com/wp-content/uploads/2017/09/image-editing-tools.jpg"}></Badge>
+        <Switch>
+          <Route exact path="/" component={Main}></Route>
+          <Route exact path="/new" component={Badge}></Route>
+          <Route component={Error}></Route>
+        </Switch>
       </Layout>
-    </React.Frafment>
-    
+    </BrowserRouter>
   );
 }
 
