@@ -1,14 +1,15 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./style/MainButton.css"
 
 const Button = props =>{
     return(
         <React.Fragment>
-            <a className="Button" href="/">
-                <p>{props.contentText}</p>
-            </a>
+            <Link className="Button" to={props.link}>
+                <p>{props.contextText}</p>
+            </Link>
         </React.Fragment>
-    )
+    );
 }
 
-export default Button; 
+export default Button
