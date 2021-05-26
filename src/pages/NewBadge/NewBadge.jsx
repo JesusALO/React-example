@@ -52,8 +52,8 @@ class NewBadge extends React.Component{
                     <div className="row">
                         <div className="col-6">
                             <Badge
-                                header_picture = {this.state.form.header_picture || "http://parksadventure.com/wp-content/uploads/2017/10/header-image-1-2.png"}
-                                profile_picture = {this.state.form.profile_picture || "https://st2.depositphotos.com/1009634/7235/v/600/depositphotos_72350117-stock-illustration-no-user-profile-picture-hand.jpg"}
+                                header_picture = {this.state.form.header_picture || "https://www.wallpaperup.com/uploads/wallpapers/2014/02/13/253751/360d0c22c97272c81a0a9d2da1085442-187.jpg"}
+                                profile_picture = {this.state.form.profile_picture || "https://img.europapress.es/fotoweb/fotonoticia_20210222150710_260.jpg"}
                                 name = {this.state.form.name || "Default User"}
                                 age = {this.state.form.age || "21"}
                                 city = {this.state.form.city || "City"}
