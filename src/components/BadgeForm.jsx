@@ -31,6 +31,45 @@ class BadgeForm extends React.Component{
                                 value={this.props.formValues.profile_picture} 
                             />
                         </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1">
+                                Badge Hero URL
+                            </label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                name="badge_hero_url"
+                                onChange={this.props.onChange}
+                                value={this.props.formValues.header_picture} 
+                            />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1">
+                                Age
+                            </label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                name="age"
+                                onChange={this.props.onChange}
+                                value={this.props.formValues.age} 
+                            />
+                        </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1">
+                                City
+                            </label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                name="city"
+                                onChange={this.props.onChange}
+                                value={this.props.formValues.city} 
+                            />
+                        </div>
+                        <button type="submit" className="Submit__button">
+                            Save
+                        </button>
                     </form>
                 </div>
             </React.Fragment>
