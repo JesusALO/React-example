@@ -8,7 +8,7 @@ class Header extends React.Component{
             <React.Fragment>
                 <div className="Header">
                     <Link to="/">
-                    <img src="https://www.utch.edu.mx/wp-content/uploads/2017/08/utch-menu.png" alt="logo"/>
+                        <img src="https://codigosfreefire.b-cdn.net/wp-content/uploads/2020/06/logo-de-booyah-png-1024x492.png" alt="logo"/>
                     </Link>
                 </div>
             </React.Fragment>
