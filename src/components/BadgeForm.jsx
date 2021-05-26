@@ -19,6 +19,18 @@ class BadgeForm extends React.Component{
                                 value={this.props.formValues.name} 
                             />
                         </div>
+                        <div className="form-group mb-2">
+                            <label className="mb-1">
+                                Profile Picture URL
+                            </label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                name="profile_pic_url"
+                                onChange={this.props.onChange}
+                                value={this.props.formValues.profile_picture} 
+                            />
+                        </div>
                     </form>
                 </div>
             </React.Fragment>
