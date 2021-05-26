@@ -2,8 +2,10 @@
     width: 100%;
 }
 
-.Hero_img{
+.Heroimg{
     width: 100%;
+    top: 41px;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +14,7 @@
 
 .Hero__color_filter{
     position: absolute;
-    background-color: rgba(0, 87, 90, 0.6);
+    background-color: rgba(48, 63, 63, 0.6);
     width: 100%;
-    z-index: 1;
+    z-index: -1;
 }
