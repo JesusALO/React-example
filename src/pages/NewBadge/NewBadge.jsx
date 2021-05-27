@@ -55,7 +55,7 @@ class NewBadge extends React.Component{
                                 header_picture = {this.state.form.header_picture || "https://www.wallpaperup.com/uploads/wallpapers/2014/02/13/253751/360d0c22c97272c81a0a9d2da1085442-187.jpg"}
                                 profile_picture = {this.state.form.profile_picture || "https://img.europapress.es/fotoweb/fotonoticia_20210222150710_260.jpg"}
                                 name = {this.state.form.name || "Default User"}
-                                age = {this.state.form.age || "21"}
+                                age = {this.state.form.age || "18"}
                                 city = {this.state.form.city || "City"}
                                 followers = {this.state.form.followers || "0"}
                                 likes = {this.state.form.likes || "0"}
