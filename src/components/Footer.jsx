@@ -9,6 +9,6 @@ const Footer = (props) =>{
             </div>
         </React.Fragment>
     );
-}
+};
 
 export default Footer;

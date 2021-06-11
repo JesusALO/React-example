@@ -2,6 +2,7 @@ import React from "react"
 import Hero from "../../components/Hero"
 import Badge from "../../components/Badge"
 import BadgeForm from "../../components/BadgeForm"
+import Footer from "../../components/Footer"
 import "./NewBadge.css"
 import api from "../../libs/api"
 
@@ -71,6 +72,7 @@ class NewBadge extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer s={{bottom:0}}></Footer>
             </React.Fragment>
         )
     }

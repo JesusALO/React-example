@@ -17,6 +17,6 @@ const Main = props =>{
             <Footer s={{bottom:0}}></Footer>
         </React.Fragment>
     );
-}
+};
 
 export default Main;
