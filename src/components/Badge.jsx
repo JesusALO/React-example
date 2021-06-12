@@ -9,11 +9,11 @@ class Badge extends Component{
             <React.Fragment>
                 <div className="Badge m-5">
                     <div className="Badge__header">
-                        <img src={this.props.header_picture} alt="header background"></img>
+                        <img src={this.props.header_img_url} alt="header background"></img>
                     </div>
                     <div className="container mt-5 mb-1 Badge__userInfo">
                         <div className="Badge__userImage">
-                            <img src={this.props.profile_picture} alt="Profile pic"></img>
+                            <img src={this.props.profile_picture_url} alt="Profile pic"></img>
                         </div>
                         <h4 className="text-center mt-5">{this.props.name} <i>{this.props.age}</i></h4>
                         <p className="text-center">{this.props.city}</p>

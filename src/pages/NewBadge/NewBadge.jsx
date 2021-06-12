@@ -4,7 +4,7 @@ import Badge from "../../components/Badge"
 import BadgeForm from "../../components/BadgeForm"
 import Footer from "../../components/Footer"
 import "./NewBadge.css"
-import api from "../../libs/api"
+import api from "../../libs/fetch";
 
 class NewBadge extends React.Component{
     
@@ -12,14 +12,15 @@ class NewBadge extends React.Component{
         loading : false,
         error: null,
         form:{
-            header_picture:"",
-            profile_picture:"",
+            header_img_url:"",
+            profile_picture_url:"",
             name:"",
             age:"",
             city:"",
             followers:"",
             likes:"",
             post:"",
+            posts:"",
         },
     };
     
@@ -39,7 +40,7 @@ class NewBadge extends React.Component{
         try{
             await api.badges.create(this.state.form)
             this.setState({loading:false, error:null})
-            this.props.history.push("/")
+            this.props.history.push("/badges")
         }catch(error){
             this.setState({loading:false, error:error})
         }
@@ -53,8 +54,14 @@ class NewBadge extends React.Component{
                     <div className="row">
                         <div className="col-6">
                             <Badge
-                                header_picture = {this.state.form.header_picture || "https://www.wallpaperup.com/uploads/wallpapers/2014/02/13/253751/360d0c22c97272c81a0a9d2da1085442-187.jpg"}
-                                profile_picture = {this.state.form.profile_picture || "https://img.europapress.es/fotoweb/fotonoticia_20210222150710_260.jpg"}
+                                header_img_url = {
+                                    this.state.form.header_img_url || 
+                                    "https://www.wallpaperup.com/uploads/wallpapers/2014/02/13/253751/360d0c22c97272c81a0a9d2da1085442-187.jpg"
+                            }
+                                profile_picture_url = {
+                                    this.state.form.profile_picture_url || 
+                                    "https://img.europapress.es/fotoweb/fotonoticia_20210222150710_260.jpg"
+                            }
                                 name = {this.state.form.name || "Default User"}
                                 age = {this.state.form.age || "18"}
                                 city = {this.state.form.city || "City"}
