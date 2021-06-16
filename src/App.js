@@ -6,9 +6,7 @@ import NewBadge from './pages/NewBadge/NewBadge'
 import Badges from "./pages/Badges/Badges"
 import BadgeDetails from "./components/BadgeDetails"
 import NotFound from "./pages/NotFound/NotFound"
-import Sign_up from './components/Sign_up'
-import Log_in from './components/Log_in'
-import None from './components/none'
+import EditBadge from './pages/EditBadge/EditBadge'
 
 function App() {
   return (
@@ -17,11 +15,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main}></Route>
           <Route exact path="/new" component={NewBadge}></Route>
-          <Route exact path="/sign_up" component={Sign_up}></Route>
-          <Route exact path="/log_in" component={Log_in}></Route>
-          <Route exact path="/none" component={None}></Route>
           <Route exact path="/badges" component={Badges}></Route>¨
           <Route exact path="/:badgeId" component={BadgeDetails}></Route>
+          <Route exact path="/:badgeId/edit" component={EditBadge}></Route>
           <Route component={NotFound}></Route>
         </Switch>
       </Layout>

@@ -3,10 +3,10 @@ import Hero from "../../components/Hero"
 import Badge from "../../components/Badge"
 import BadgeForm from "../../components/BadgeForm"
 import Footer from "../../components/Footer"
-import "./NewBadge.css"
+import "../NewBadge/NewBadge.css"
 import api from "../../libs/fetch";
 
-class NewBadge extends React.Component {
+class EditBadge extends React.Component {
 
     state = {
         loading: false,
@@ -20,8 +20,21 @@ class NewBadge extends React.Component {
             followers: "",
             likes: "",
             post: "",
-            posts: "",
         },
+    };
+
+    componentDidMount(){
+        this.fetchData();
+    }
+
+    fetchData = async () => {
+        this.setState({ loading: true, error: null })
+        try {
+            const data = await api.badges.read(this.props.match.params.badgeId)
+            this.setState({ loading: false, form: data })
+        } catch (error) {
+            this.setState({ loading: false, error: error })
+        }
     };
 
     handleChange = event => {
@@ -38,7 +51,7 @@ class NewBadge extends React.Component {
         this.setState({ loading: true, error: null })
 
         try {
-            await api.badges.create(this.state.form)
+            await api.badges.update(this.props.match.params.badgeId, this.state.form)
             this.setState({ loading: false, error: null })
             this.props.history.push("/badges")
         } catch (error) {
@@ -49,7 +62,7 @@ class NewBadge extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Hero h={"15vh"}></Hero>
+                <Hero h={"10vh"}></Hero>
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
@@ -62,9 +75,9 @@ class NewBadge extends React.Component {
                                     this.state.form.profile_picture_url ||
                                     "https://img.europapress.es/fotoweb/fotonoticia_20210222150710_260.jpg"
                                 }
-                                name={this.state.form.name || "Default User"}
-                                age={this.state.form.age || "18"}
-                                city={this.state.form.city || "City"}
+                                name={this.state.form.name || "Name LastName"}
+                                age={this.state.form.age || "xx"}
+                                city={this.state.form.city || "State Country"}
                                 followers={this.state.form.followers || "0"}
                                 likes={this.state.form.likes || "0"}
                                 post={this.state.form.post || "0"}
@@ -85,4 +98,4 @@ class NewBadge extends React.Component {
     }
 }
 
-export default NewBadge;
+export default EditBadge;

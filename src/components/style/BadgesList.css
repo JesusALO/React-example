@@ -45,3 +45,10 @@
     display: flex;
     justify-content: center;
 }
+
+.BadgeList_search-bar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: 50px;
+}
