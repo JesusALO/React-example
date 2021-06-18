@@ -15,7 +15,6 @@ const DeleteBadgeModal = props =>{
                     <button onClick={props.onClose} className="btn btn-success mx-2">Cancel</button>
                 </div>
             </div>
-            <p>modal</p>
         </Modal>
     );
 }

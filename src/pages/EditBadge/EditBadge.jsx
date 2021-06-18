@@ -3,6 +3,8 @@ import Hero from "../../components/Hero"
 import Badge from "../../components/Badge"
 import BadgeForm from "../../components/BadgeForm"
 import Footer from "../../components/Footer"
+import PageError from "../../components/PageError"
+import Loader from "../../components/Loader"
 import "../NewBadge/NewBadge.css"
 import api from "../../libs/fetch";
 
@@ -55,11 +57,21 @@ class EditBadge extends React.Component {
             this.setState({ loading: false, error: null })
             this.props.history.push("/badges")
         } catch (error) {
+            console.log(error)
             this.setState({ loading: false, error: error })
         }
     }
 
     render() {
+
+        if(this.state.loading){
+            return <Loader></Loader>
+        }
+
+        if(this.state.error){
+            return <PageError error={this.state.error.message}></PageError>
+        }
+
         return (
             <React.Fragment>
                 <Hero h={"10vh"}></Hero>

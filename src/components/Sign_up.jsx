@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import './style/Sign_up.css'
+import Button from "./MainButton";
 
 class Sign_up extends React.Component{
     render(){
@@ -39,9 +40,9 @@ class Sign_up extends React.Component{
                                     name="confirm_password"
                                 />
                             </div>
-                            <button type="submit" className="Submit__button">
-                                Sign Up
-                            </button>
+                            <div className="col-3">
+                                <Button contentText={"Sign up"} theme={"Button"} link={"/login"}></Button>
+                            </div>
                         </form>
                     </div>
                 </center>

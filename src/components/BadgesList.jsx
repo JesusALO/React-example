@@ -13,7 +13,7 @@ class BadgesListItem extends React.Component {
                             <img src={this.props.badge.profile_picture_url} alt="Profile_picture" />
                         </div>
                         <div className="Item__background">
-                            <img src={this.props.header_img_url} alt="profile_picture" />
+                            <img src={this.props.badge.header_img_url} alt="header_picture" />
                         </div>
                     </div>
                     <div className="col-7 my-5">
@@ -78,14 +78,14 @@ const BadgesList = (props) => {
     return (
         <React.Fragment>
             <div className="BadgesList__container">
-                <div className="BadgeList_search-bar">
-                    <div className="row">
-                        <div className="col-3">
+                <div className="BadgeList__search-bar">
+                    <div className="row BadgeList__search-bar__row">
+                        <div className="col">
                             <div className="form-group mt-3">
                                 <label>Filter Badges</label>
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control BadgeList__search"
                                     value={query}
                                     onChange={(e) => {
                                         setQuery(e.target.value)
@@ -93,7 +93,7 @@ const BadgesList = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col-4">
                             <div className="Badges__container">
                                 <div className="Badges__button">
                                     <Button
@@ -111,10 +111,13 @@ const BadgesList = (props) => {
                 </div>
                 <div className="container List mb-5">
                     <div className="list-unstyled">
-                        {props.badges.map((badge) => {
+                        {filteredBadges.map((badge) => {
                             return (
                                 <div key={badge._id}>
-                                    <Link className="text-reset text-decoration-none" to={`/${badge._id}`}>
+                                    <Link 
+                                        className="text-reset text-decoration-none" 
+                                        to={`/${badge._id}`}
+                                    >
                                         <BadgesListItem badge={badge}></BadgesListItem>
                                     </Link>
                                 </div>

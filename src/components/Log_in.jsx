@@ -1,4 +1,6 @@
-import React, {Component} from "react"
+import React from "react"
+import {Link} from "react-router-dom"
+import Button from "./MainButton";
 import './style/Log_in.css'
 
 class Log_in extends React.Component{
@@ -29,9 +31,12 @@ class Log_in extends React.Component{
                                     name="password"
                                 />
                             </div>
-                            <button type="submit" className="Submit__button">
-                                Log in
-                            </button>
+                            <div className="col-3">
+                                <Button contentText={"Login"} theme={"Button"} link={"/badges"}></Button>
+                            </div>
+                            <div className="col-3">
+                                <Button contentText={"Sign up"} theme={"Button"} link={"/sign_up"}></Button>
+                            </div>
                         </form>
                     </div>
                 </center>

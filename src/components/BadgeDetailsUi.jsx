@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import Footer from "./Footer";
 import DeleteBadgeModal from "./DeleteBadgeModal";
 
-const BadgeDetailsUi = props => {
+const BadgeDetailsUi = (props) => {
     const badge = props.badge
 
     return (

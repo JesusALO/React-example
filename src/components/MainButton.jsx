@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./style/MainButton.css"
 
-const Button = props =>{
+const Button = (props) =>{
     return(
         <React.Fragment>
             <Link className={props.theme} to={props.link}>
@@ -12,4 +12,4 @@ const Button = props =>{
     );
 }
 
-export default Button
+export default Button;

@@ -10,7 +10,7 @@ const Main = props =>{
             <div className="Main">
                 <div className="Main__content">
                     <h1 className="Main__title">{props.title || "Begin"}</h1>
-                    <Button contentText={"Login"} theme={"Button"} link={"/badges"}></Button>
+                    <Button contentText={"Login"} theme={"Button"} link={"/login"}></Button>
                 </div>
                 <Hero h={"88vh"}></Hero>
             </div>

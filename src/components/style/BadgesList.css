@@ -1,7 +1,8 @@
-.BadgesListItem{
+.BadgeListItem{
     width: 700px;
     height: 180px;
     display: flex;
+    border-radius: 25px;
     position: relative;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
 }
@@ -46,9 +47,10 @@
     justify-content: center;
 }
 
-.BadgeList_search-bar{
+.BadgeList__search-bar{
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-left: 50px;
+
 }
+

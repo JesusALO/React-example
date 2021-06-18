@@ -1,5 +1,7 @@
 import React from "react";
 import BadgeDetailsUi from "./BadgeDetailsUi";
+import PageError from "./PageError";
+import Loader from "./Loader";
 import api from "../libs/fetch";
 
 class BadgeDetails extends React.Component {
@@ -46,6 +48,15 @@ class BadgeDetails extends React.Component {
     }
 
     render() {
+
+        if(this.state.loading){
+            return <Loader></Loader>
+        }
+
+        if(this.state.error){
+            return <PageError error={this.state.error.message}></PageError>
+        }
+
         return (<BadgeDetailsUi
             onCloseModal={this.handleCloseModal}
             onOpenModal={this.handleOpenModal}
